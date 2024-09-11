@@ -42,7 +42,18 @@ public class Main {
             System.out.println(listaLiczbWpisanych.get(i));
         }
 
-
+        //losowanie liczb bez powtórzeń
+       ArrayList<Integer>listaLosowychBezPowtorzen =new ArrayList<>();
+        for (int i = 0; i < 6; i++) {
+            int liczba = (int)(Math.random()*100+1);
+            while(listaLosowychBezPowtorzen.contains(liczba)){
+                liczba= (int)(Math.random()*100+1);
+            }
+            listaLosowychBezPowtorzen.add(liczba);
+        }
+        //wypisywanie
+        System.out.println("wylosowane bez powtorzeń");
+        System.out.println(listaLosowychBezPowtorzen);
 
 
     }
